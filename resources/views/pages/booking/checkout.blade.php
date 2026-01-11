@@ -174,7 +174,7 @@
                         <p class="font-semibold">Pay in Full</p>
                     </div>
                     <div
-                        class="w-0 mx-auto group-has-[:checked]:ring-1 group-has-[:checked]:ring-[#91BF77] group-has-[:checked]:w-[90%] transition-all duration-300">
+                        class="w-0 mx-auto group-has-[:che+ cked]:ring-1 group-has-[:checked]:ring-[#91BF77] group-has-[:checked]:w-[90%] transition-all duration-300">
                     </div>
                 </label>
             </div>

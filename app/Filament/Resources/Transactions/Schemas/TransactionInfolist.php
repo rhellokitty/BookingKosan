@@ -13,9 +13,9 @@ class TransactionInfolist
             ->components([
                 TextEntry::make('code')
                     ->numeric(),
-                TextEntry::make('boarding_house_id')
-                    ->numeric(),
-                TextEntry::make('room_id')
+                TextEntry::make('boardingHouse.name')
+                    ->label('Boarding House'),
+                TextEntry::make('room.name')
                     ->numeric(),
                 TextEntry::make('name'),
                 TextEntry::make('email')

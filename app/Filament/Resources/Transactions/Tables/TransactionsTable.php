@@ -22,11 +22,9 @@ class TransactionsTable
                 TextColumn::make('code')
                     ->numeric()
                     ->sortable(),
-                TextColumn::make('boarding_house_id')
-                    ->numeric()
+                TextColumn::make('boardingHouse.name')
                     ->sortable(),
-                TextColumn::make('room_id')
-                    ->numeric()
+                TextColumn::make('room.name')
                     ->sortable(),
                 TextColumn::make('name')
                     ->searchable(),

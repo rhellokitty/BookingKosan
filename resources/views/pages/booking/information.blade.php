@@ -71,7 +71,7 @@
             <div class="flex flex-col w-full gap-2 px-5">
                 <p class="font-semibold">Complete Name</p>
                 <label
-                    class="flex items-center w-full rounded-full p-[14px_20px] gap-3 bg-white focus-within:ring-1 focus-within:ring-[#91BF77] transition-all duration-300 @error('name') border-red-500
+                    class="flex items-center w-full rounded-full p-[14px_20px] gap-3 bg-white focus-within:ring-1 focus-within:ring-[#91BF77] transition-all duration-300 @error('name') border border-red-500
                     @enderror ">
                     <img src="{{ asset('assets/images/icons/profile-2user.svg') }}" class="w-5 h-5 flex shrink-0"
                         alt="icon">
@@ -87,7 +87,7 @@
             <div class="flex flex-col w-full gap-2 px-5">
                 <p class="font-semibold">Email Address</p>
                 <label
-                    class="flex items-center w-full rounded-full p-[14px_20px] gap-3 bg-white focus-within:ring-1 focus-within:ring-[#91BF77] transition-all duration-300 @error('email') border-red-500
+                    class="flex items-center w-full rounded-full p-[14px_20px] gap-3 bg-white focus-within:ring-1 focus-within:ring-[#91BF77] transition-all duration-300 @error('email') border border-red-500
                     @enderror ">
                     <img src="{{ asset('assets/images/icons/sms.svg') }}" class="w-5 h-5 flex shrink-0" alt="icon">
                     <input type="email" name="email" id=""

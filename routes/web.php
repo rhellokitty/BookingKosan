@@ -29,3 +29,4 @@ Route::get('/category/{slug}', [CategoryController::class, 'show'])->name('categ
 Route::get('/city/{slug}', [CityController::class, 'show'])->name('city.show');
 
 Route::get('/check-booking', [BookingController::class, 'check'])->name('check-booking');
+Route::post('/check-booking-show', [BookingController::class, 'show'])->name('check-booking.show');
