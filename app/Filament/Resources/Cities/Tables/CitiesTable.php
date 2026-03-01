@@ -18,8 +18,7 @@ class CitiesTable
         return $table
             ->columns([
                 ImageColumn::make('image')
-                    ->disk('public')
-                    ->visibility('public'),
+                    ->disk('public'),
                 TextColumn::make('name')
                     ->searchable(),
                 TextColumn::make('slug')
