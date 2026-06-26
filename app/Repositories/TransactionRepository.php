@@ -36,7 +36,7 @@ class TransactionRepository implements TransactionRepositoryInterface
         session()->forget('transaction');
 
         return $transaction;
-    }
+    } 
 
     private function prepareTransactionData($data, $room)
     {

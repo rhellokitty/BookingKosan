@@ -4,9 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Interface\BoardingHouseRepositoryInterface;
 use App\Interface\CategoryRepositoryInterface;
-use App\Repositories\CategoryRepository;
-use Illuminate\Http\Request;
-
 class CategoryController extends Controller
 {
     private BoardingHouseRepositoryInterface $boardingHouseRepository;
@@ -24,8 +21,8 @@ class CategoryController extends Controller
     public function show($slug)
     {
         $boardingHouses = $this->boardingHouseRepository->getBoardingHouseByCategorySlug($slug);
-        $categories = $this->categoryRepository->all();
+        $category = $this->categoryRepository->findBySlug($slug);
 
-        return view('pages.category.show', compact('boardingHouses'));
+        return view('pages.category.show', compact('boardingHouses', 'category'));
     }
 }

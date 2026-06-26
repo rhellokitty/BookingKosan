@@ -27,7 +27,7 @@
                             </div>
                             <div class="flex flex-col gap-0.5">
                                 <h3 class="font-semibold">{{ $category->name }}</h3>
-                                <p class="text-sm text-ngekos-grey">{{ $category->boardingHouses->count() }}</p>
+                                {{-- <p class="text-sm text-ngekos-grey">{{ $category->boardingHouses->count() }}</p> --}}
                             </div>
                         </div>
                     </a>
@@ -99,23 +99,27 @@
                 </div>
             </a>
         </div>
-        <div class="grid grid-cols-2 gap-4">
-            @foreach ($cities as $city)
-                <a href="{{ route('city.show', $city->slug) }}" class="card">
-                    <div
-                        class="flex items-center rounded-[22px] p-[10px] gap-3 bg-white border border-white overflow-hidden hover:border-[#91BF77] transition-all duration-300">
-                        <div
-                            class="w-[55px] h-[55px] flex shrink-0 rounded-full border-4 border-white ring-1 ring-[#F1F2F6] overflow-hidden">
-                            <img src="{{ asset('storage/' . $city->image) }}" class="w-full h-full object-cover"
-                                alt="icon">
-                        </div>
-                        <div class="flex flex-col gap-[2px]">
-                            <h3 class="font-semibold">{{ $city->name }}</h3>
-                            <p class="text-sm text-ngekos-grey">{{ $city->boardingHouses->count() }}</p>
-                        </div>
+        <div class="swiper w-[calc(100%+40px)] overflow-x-hidden -mx-5 px-5">
+            <div class="swiper-wrapper">
+                @foreach ($cities as $city)
+                    <div class="swiper-slide !w-fit">
+                        <a href="{{ route('city.show', $city->slug) }}" class="card shrink-0">
+                            <div
+                                class="flex w-[190px] items-center rounded-[22px] p-[10px] gap-3 bg-white border border-white overflow-hidden hover:border-[#91BF77] transition-all duration-300">
+                                <div
+                                    class="w-[55px] h-[55px] flex shrink-0 rounded-full border-4 border-white ring-1 ring-[#F1F2F6] overflow-hidden">
+                                    <img src="{{ asset('storage/' . $city->image) }}" class="w-full h-full object-cover"
+                                        alt="icon">
+                                </div>
+                                <div class="flex flex-col gap-[2px]">
+                                    <h3 class="font-semibold">{{ $city->name }}</h3>
+                                    {{-- <p class="text-sm text-ngekos-grey">{{ $city->boardingHouses->count() }}</p> --}}
+                                </div>
+                            </div>
+                        </a>
                     </div>
-                </a>
-            @endforeach
+                @endforeach
+            </div>
         </div>
     </section>
 
